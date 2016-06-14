@@ -9,23 +9,22 @@ source=0;
 
 for(var i=0;i<graph.length;i++)
 {
-	dfsInfo.push({distance:null,predecessor:null});
+	dfsInfo.push({distance:null,predecessor:null}); //All nodes are unvisited
 }
 
-dfsInfo[source].distance=0;
+dfsInfo[source].distance=0; //Source is the first one to visit
 
 var doDFS=function(graph,node)
 {
     console.log(" Node processed "+node);
-    for(var i=0;i<graph[node].length;i++)
+    for(var i=0;i<graph[node].length;i++) //Visit neighbouring nodes
     {
-    	var temp=graph[node][i];
-      console.log(" Here we are "+temp);
-      if(dfsInfo[temp].distance===null)
+      var temp=graph[node][i]; //Store the first neighbouring node
+      if(dfsInfo[temp].distance===null) //If unvisited, visit
       {
-      	dfsInfo[temp].distance=dfsInfo[node].distance+1;
-        dfsInfo[temp].predecessor=node;
-        doDFS(graph,temp);
+      	dfsInfo[temp].distance=dfsInfo[node].distance+1; //Set distance
+        dfsInfo[temp].predecessor=node; //Set predescessor
+        doDFS(graph,temp); //Start with the first neigbouring node's neighbours
       }
     }
 }
