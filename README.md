@@ -1,6 +1,5 @@
-# Data_Structures
-Some JavaScript based data structure stuff I wrote. I'll continue to add stuff to it partially to archive it for use later and also to consolidate all
-the code I've written.
+# Synopsis
+Some JavaScript based data structure stuff I wrote. I'll continue to add stuff to it partially to archive it for use later and also to consolidate all the code I've written. Feel free to take, share and modify. It's all for use only.
 
 ##Simple Sorting Algorithms
 
